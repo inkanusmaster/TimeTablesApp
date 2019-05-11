@@ -28,11 +28,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        int maxValue = 20;
+        int startingPosition = 10;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         SeekBar tableSeekBar = findViewById(R.id.tableSeekBar);
-        tableSeekBar.setMax(20);
-        tableSeekBar.setProgress(10);
+        tableSeekBar.setMax(maxValue);
+        tableSeekBar.setProgress(startingPosition);
         fillTableListView(tableSeekBar.getProgress());
 
         tableSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
